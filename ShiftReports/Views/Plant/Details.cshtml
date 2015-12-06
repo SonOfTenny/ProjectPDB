@@ -1,0 +1,29 @@
+﻿@model ShiftReports.Models.Plant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Plant</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MixRatePerHour)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MixRatePerHour)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PlantID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
