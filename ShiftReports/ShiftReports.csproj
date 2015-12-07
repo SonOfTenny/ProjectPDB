@@ -191,6 +191,7 @@
     <Compile Include="Controllers\DowntimeTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlantController.cs" />
+    <Compile Include="Controllers\ProductionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DAL\ShiftContext.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -216,6 +217,10 @@
     <Compile Include="Migrations\201512052242152_UpdatedDowntime.cs" />
     <Compile Include="Migrations\201512052242152_UpdatedDowntime.Designer.cs">
       <DependentUpon>201512052242152_UpdatedDowntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512071236494_productionUpdated.cs" />
+    <Compile Include="Migrations\201512071236494_productionUpdated.Designer.cs">
+      <DependentUpon>201512071236494_productionUpdated.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -354,6 +359,11 @@
     <Content Include="Views\DowntimeType\Create.cshtml" />
     <Content Include="Views\DowntimeType\Edit.cshtml" />
     <Content Include="Views\DowntimeType\Delete.cshtml" />
+    <Content Include="Views\Production\Index.cshtml" />
+    <Content Include="Views\Production\Details.cshtml" />
+    <Content Include="Views\Production\Create.cshtml" />
+    <Content Include="Views\Production\Edit.cshtml" />
+    <Content Include="Views\Production\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -376,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512052242152_UpdatedDowntime.resx">
       <DependentUpon>201512052242152_UpdatedDowntime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512071236494_productionUpdated.resx">
+      <DependentUpon>201512071236494_productionUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

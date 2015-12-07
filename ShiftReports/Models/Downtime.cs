@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace ShiftReports.Models
 {
@@ -15,7 +15,7 @@ namespace ShiftReports.Models
         public int ShiftID { get; set; }
         public int PlantID { get; set; }
         public int DowntimeTypeID { get; set; }
-        //public string DowntimeType { get; set; }
+        public string DowntimeType { get; set; }
         [MaxLength(255)]
         public string Reason { get; set; }
         [MaxLength(255)]

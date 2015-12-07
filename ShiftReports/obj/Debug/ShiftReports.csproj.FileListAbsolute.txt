@@ -93,3 +93,4 @@ C:\Users\Mark\documents\visual studio 2012\Projects\ShiftReports\ShiftReports\ob
 C:\Users\Mark\documents\visual studio 2012\Projects\ShiftReports\ShiftReports\obj\Debug\ShiftReports.Migrations.ColumnFirstName.resources
 C:\Users\Mark\documents\visual studio 2012\Projects\ShiftReports\ShiftReports\obj\Debug\ShiftReports.Migrations.UpdatedProduction.resources
 C:\Users\Mark\documents\visual studio 2012\Projects\ShiftReports\ShiftReports\obj\Debug\ShiftReports.Migrations.UpdatedDowntime.resources
+C:\Users\Mark\documents\visual studio 2012\Projects\ShiftReports\ShiftReports\obj\Debug\ShiftReports.Migrations.productionUpdated.resources

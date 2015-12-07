@@ -21,36 +21,38 @@ namespace ShiftReports.Models
          * DO I REALLY NEED THIS?
          * [MaxLength(5),MinLength(1)]
         public int TargetMix { get; set; } */
-         [MaxLength(5), MinLength(1)]
+        // [MaxLength(5), MinLength(1)]
         public int ActualMix { get; set; }
 
         /* public float Efficieny { get { return ((float)ActualMix / (float)Plant.MixRatePerHour); } }
          [MaxLength(5), MinLength(1)] */
         public int CrumbWaste { get; set; }
-         [MaxLength(5), MinLength(1)]
+      //   [MaxLength(5), MinLength(1)]
         public int Cmp_Waste { get; set; }
+      // [MinLength(1)]
+         public int Manning { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
 
         // magic calculation of efficency
-        public string efficency
+        /*public string efficency
         {
             get { return (ActualMix / Plant.MixRatePerHour * 100).ToString(String.Format("Value: {0:%%}.")); }
-        }
+        }*/
 
         // super duper totaller function
-        public int TotalWaste
+        /*public int TotalWaste
         {
             get { return (CrumbWaste + Cmp_Waste); }
-        }
+        }*/
 
         // all the fancy foreign keys
         public virtual User User { get; set; }
         public virtual Shift Shift { get; set; }
         public virtual Plant Plant { get; set; }
     
-
+        // NOTES: REMOVED THE MAXLENGTH USE RANGE INSTEAD
         
     }
 }

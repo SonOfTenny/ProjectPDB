@@ -1,0 +1,88 @@
+﻿@model PagedList.IPagedList<ShiftReports.Models.Production>
+@using PagedList.Mvc; 
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Production Data";
+}
+
+<h2>Production Data</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "Production",FormMethod.Get))
+{
+    <p>
+        Find by Name: @Html.TextBox("searchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+<table>
+    <tr>
+        <th>
+            @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.UserSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Shift Type", "Index", new { sortOrder = ViewBag.ShiftSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Plant Type", "Index", new { sortOrder = ViewBag.PlantSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Actual Mix", "Index", new { sortOrder = ViewBag.ActualMixSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Crumb Waste", "Index", new { sortOrder = ViewBag.CrumbSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Compact. Waste", "Index", new { sortOrder = ViewBag.CMPSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Manning", "Index", new { sortOrder = ViewBag.ManningSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Date", "Index", new { sortOrder = ViewBag.DateSortParm})
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shift.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plant.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualMix)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CrumbWaste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cmp_Waste)
+        </td>
+           <td>
+            @Html.DisplayFor(modelItem => item.Manning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductionID })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager( Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter }) )

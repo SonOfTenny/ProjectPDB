@@ -1,0 +1,78 @@
+﻿@model ShiftReports.Models.Production
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Production</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.User.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Shift.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Shift.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Plant.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Plant.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ActualMix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActualMix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CrumbWaste)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CrumbWaste)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cmp_Waste)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cmp_Waste)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.efficency)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.efficency)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TotalWaste)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TotalWaste)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
